@@ -8,8 +8,8 @@ tsApp.factory('EntryDataService', function($http) {
     srv._entryList = [
         {
             id           : 'P00001',
-            state        : 'open'
-            timestamp    : '1234567890'
+            state        : 'open',
+            timestamp    : '1234567890',
             creator      : 'Oliver Ochs',
             errororigin  : 'fehlerort1',
             errorcode    : 91,
@@ -18,8 +18,8 @@ tsApp.factory('EntryDataService', function($http) {
         },
         {
             id           : 'P00002',
-            state        : 'closed'
-            timestamp    : '2345678901'
+            state        : 'closed',
+            timestamp    : '2345678901',
             creator      : 'Daniel Schneider',
             errororigin  : 'fehlerort2',
             errorcode    : 92,
@@ -28,8 +28,8 @@ tsApp.factory('EntryDataService', function($http) {
         },
         {
             id           : 'P00003',
-            state        : 'in process'
-            timestamp    : '3456789012'
+            state        : 'in process',
+            timestamp    : '3456789012',
             creator      : 'Walter Walter',
             errororigin  : 'fehlerort3',
             errorcode    : 93,
@@ -39,7 +39,7 @@ tsApp.factory('EntryDataService', function($http) {
     ];
 
     // Service implementation
-    srv.getEntriesByState = function (state) {
+    srv.getEntriesByState = function(state) {
         // select only state selected entries
         return srv._entryList;
     };
@@ -87,7 +87,7 @@ tsApp.factory('EntryDataService', function($http) {
         },
         getEntryById: function (id) {
             return srv.getEntryById(id);
-        }
+        },
         storeEntry: function(entry) {
             return srv.storeEntry(entry);
         },
