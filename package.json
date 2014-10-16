@@ -2,7 +2,7 @@
   "name": "ts",
   "version": "0.0.1",
   "main": "server.js",
-  "description": "A simple nodeJs application. Connecting mongoDb with mongoose",
+  "description": "A simple AngularJS app. Serving as a simple tracking system",
   "author": "Arthur Trauter",
   "license": "MIT",
   "dependencies": {
@@ -12,12 +12,19 @@
     "mongoose": "~3.6.13"
   },
   "scripts": {
-    "start": "node server.js"
+    "test": "karma start",
+    "posttest": "karma start karma-e2e.conf.js"
   },
   "directories": {
     "test": "test"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "karma": "0.12.0",
+    "karma-chrome-launcher": "0.1.2",
+    "karma-jasmine": "0.2.2",
+    "karma-ng-scenario": "0.1.0",
+    "karma-ng-html2js-preprocessor": "0.1.0"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/ArthurTrauter/ts.git"
