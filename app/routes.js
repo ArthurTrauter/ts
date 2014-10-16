@@ -19,13 +19,17 @@
           // create a track (accessed at POST http://localhost:3000/api/tracks)
           .post(function (req, res) {
 
-              var track = new Tracks();    // crate a new instance of the Tracks model
-              // track = 'Hallo';        // set the tracks parameters (come from the request)
+              console.log(req.body);
 
-              // save the track and check for errors
-              track.save(function(err) {
+              // crate a new instance of the Tracks model
+              Tracks.create(req.body, function(err) {
                   if (err) res.send(err);
-                  res.json({ message: 'track created!' });
+
+                  Tracks.find(function (err, todos) {
+                      if(err) res.send(err);
+
+                      res.json(todos);
+                  });
               });
 
           })
