@@ -41,7 +41,7 @@ tsApp.factory('EntryDataService', function($http) {
     // Service implementation
     srv.getEntriesByState = function(state) {
       return $http.get(
-          srv._baseUrl + '/api/tracks/' + state
+          srv._baseUrl + '/api/tracks/state/' + state
       );
     };
 
